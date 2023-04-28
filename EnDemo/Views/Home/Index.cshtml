@@ -1,0 +1,46 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SSL 请求</title>
+    <script src="~/Scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="~/Scripts/jsencrypt.min.js" type="text/javascript"></script>
+    @*<script src="~/Scripts/crypto-js.js" type="text/javascript"></script>*@
+    <script type="text/javascript">
+        $(function ()
+        {
+
+            ssllPost();
+
+            $("#sslpost").click(function ()
+            {
+                ssllPost();
+            });
+
+            function ssllPost()
+            {
+                var encryptor = new JSEncrypt()  // 创建加密对象实例
+                //之前生成的公钥，复制的时候要小心不要有空格(此处把密钥省略了，自己写的时候可把自己生成的公钥粘到对应位置)
+               // var pubKey = 'MEwwDQYJKoZIhvcNAQEBBQADOwAwOAIxAKQXOR4AGfNl0fUUFqPIX+SZ1Fq9FbMAY9pSFy+y2zJSGrjc4pZ4rKDVJhckTJyX+QIDAQAB'
+                var pubKey = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDEL8winmvhn728vL5KLPSRbceTOShBp81FTo7//b6ija9wwZJjFHGmsbEKNtqZjrVhUDNVgbnxz0msKRhQezCuMD+stloYe3uJbc8j / 77 + pMMUbnx + UU1wHhvUwFuQLhxKJEu0cguVZIrPHItxIRJUMOoM06UnP9JdmRfUGxs7xwIDAQAB"
+                encryptor.setPublicKey(pubKey)//设置公钥
+                var rsaPassWord = encryptor.encrypt('要加密的内容')  // 对内容进行加密
+                $.post("@Url.Action("Test")",{ name: rsaPassWord }, function (res) {
+                    console.log(res);
+                })
+            }
+
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <input type="button" id="sslpost" value="SSL加密请求" />
+        <br />
+        <div id="result"></div>
+    </div>
+</body>
+</html>
