@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32802.440
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33801.468
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetSSL", "NetSSL\NetSSL.csproj", "{191AABEC-7DD4-4725-B10F-3F613D326299}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetSSL.Web", "NetSSL.Web\NetSSL.Web.csproj", "{2AA13E58-01B0-4DDD-9CC1-72E9F781BFCC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnDemo", "EnDemo\EnDemo.csproj", "{8081CAE7-B83F-47EC-9E8D-424BD1DF1DAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Util", "Util\Util.csproj", "{CB88873E-8912-4B15-9230-18D7978C7F1D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{8081CAE7-B83F-47EC-9E8D-424BD1DF1DAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8081CAE7-B83F-47EC-9E8D-424BD1DF1DAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8081CAE7-B83F-47EC-9E8D-424BD1DF1DAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB88873E-8912-4B15-9230-18D7978C7F1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB88873E-8912-4B15-9230-18D7978C7F1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB88873E-8912-4B15-9230-18D7978C7F1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB88873E-8912-4B15-9230-18D7978C7F1D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

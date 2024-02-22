@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Util/1.0.0": {
+        "dependencies": {
+          "BouncyCastle.Crypto": "1.7.4114.6375"
+        },
+        "runtime": {
+          "Util.dll": {}
+        }
+      },
+      "BouncyCastle.Crypto/1.7.4114.6375": {
+        "runtime": {
+          "BouncyCastle.Crypto.dll": {
+            "assemblyVersion": "1.7.4114.6375",
+            "fileVersion": "1.7.4114.6375"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Util/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BouncyCastle.Crypto/1.7.4114.6375": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

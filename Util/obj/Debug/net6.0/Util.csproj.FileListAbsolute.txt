@@ -1,0 +1,14 @@
+E:\Study\DotNet\SSLDemo\Util\obj\Debug\net6.0\Util.csproj.AssemblyReference.cache
+E:\Study\DotNet\SSLDemo\Util\obj\Debug\net6.0\Util.GeneratedMSBuildEditorConfig.editorconfig
+E:\Study\DotNet\SSLDemo\Util\obj\Debug\net6.0\Util.AssemblyInfoInputs.cache
+E:\Study\DotNet\SSLDemo\Util\obj\Debug\net6.0\Util.AssemblyInfo.cs
+E:\Study\DotNet\SSLDemo\Util\obj\Debug\net6.0\Util.csproj.CoreCompileInputs.cache
+E:\Study\DotNet\SSLDemo\Util\bin\Debug\net6.0\Util.deps.json
+E:\Study\DotNet\SSLDemo\Util\bin\Debug\net6.0\Util.dll
+E:\Study\DotNet\SSLDemo\Util\bin\Debug\net6.0\Util.pdb
+E:\Study\DotNet\SSLDemo\Util\obj\Debug\net6.0\Util.dll
+E:\Study\DotNet\SSLDemo\Util\obj\Debug\net6.0\refint\Util.dll
+E:\Study\DotNet\SSLDemo\Util\obj\Debug\net6.0\Util.pdb
+E:\Study\DotNet\SSLDemo\Util\obj\Debug\net6.0\ref\Util.dll
+E:\Study\DotNet\SSLDemo\Util\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+E:\Study\DotNet\SSLDemo\Util\obj\Debug\net6.0\Util.csproj.CopyComplete
