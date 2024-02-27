@@ -1,7 +1,4 @@
-﻿using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Security;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
@@ -10,27 +7,51 @@ using System.Threading.Tasks;
 
 namespace Util.Security
 {
-    internal class RsaUtil
+    public class RsaUtil
     {
         /// <summary>
-        /// RSA 加密
+        /// generate private key and public key arr[0] for private key arr[1] for public key
+        /// </summary>
+        /// <returns></returns>
+        public static string[] GenerateKeys()
+        {
+            string[] sKeys = new String[2];
+            RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
+            sKeys[0] = rsa.ToXmlString(true);
+            sKeys[1] = rsa.ToXmlString(false);
+            return sKeys;
+        }
+
+        /// <summary>
+        /// RSA Encrypt
         /// </summary>
         /// <param name="sSource" >Source string</param>
         /// <param name="sPublicKey" >public key</param>
         /// <returns></returns>
-        public static string RsaEncryptString(string sSource, string publicKeyString)
+        public static string EncryptString(string sSource, string sPublicKey)
         {
-            byte[] publicKeyBytes = Convert.FromBase64String(publicKeyString);
-            AsymmetricKeyParameter asymmetricKeyParameter = PublicKeyFactory.CreateKey(publicKeyBytes);
-            RsaKeyParameters rsaKeyParameters = (RsaKeyParameters)asymmetricKeyParameter;
-            RSAParameters rsaParameters = new RSAParameters();
-            rsaParameters.Modulus = rsaKeyParameters.Modulus.ToByteArrayUnsigned();
-            rsaParameters.Exponent = rsaKeyParameters.Exponent.ToByteArrayUnsigned();
             RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
-            rsa.ImportParameters(rsaParameters);
+           
+            string plaintext = sSource;
+            rsa.FromXmlString(sPublicKey);
+            byte[] cipherbytes;
+            cipherbytes = rsa.Encrypt(Encoding.UTF8.GetBytes(plaintext), false);
 
-            var cipherbytes = rsa.Encrypt(Encoding.UTF8.GetBytes(sSource), false);
             return Convert.ToBase64String(cipherbytes);
+        }
+
+        /// <summary>
+        /// RSA Decrypt
+        /// </summary>
+        /// <param name="sSource">Source string</param>
+        /// <param name="sPrivateKey">Private Key</param>
+        /// <returns></returns>
+        public static string DecryptString(string sSource, string sPrivateKey)
+        {
+            RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
+            rsa.FromXmlString(sPrivateKey);
+            byte[] plaintbytes = rsa.Decrypt(Convert.FromBase64String(sSource), false);
+            return Encoding.UTF8.GetString(plaintbytes);
         }
     }
 }

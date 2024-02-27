@@ -12,3 +12,4 @@ E:\Study\DotNet\SSLDemo\Util\obj\Debug\net6.0\Util.pdb
 E:\Study\DotNet\SSLDemo\Util\obj\Debug\net6.0\ref\Util.dll
 E:\Study\DotNet\SSLDemo\Util\bin\Debug\net6.0\BouncyCastle.Crypto.dll
 E:\Study\DotNet\SSLDemo\Util\obj\Debug\net6.0\Util.csproj.CopyComplete
+E:\Study\DotNet\SSLDemo\Util\obj\Debug\net6.0\Util.sourcelink.json
